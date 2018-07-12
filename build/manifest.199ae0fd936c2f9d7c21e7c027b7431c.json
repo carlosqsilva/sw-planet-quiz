@@ -1,0 +1,37 @@
+{
+  "icons": [
+    {
+      "src": "/sw-planet-quiz/icon_512x512.8ea46a26fc956560bc5634a05e855c0f.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "/sw-planet-quiz/icon_384x384.2d83c216e80e751b4d728788c2d45aaf.png",
+      "sizes": "384x384",
+      "type": "image/png"
+    },
+    {
+      "src": "/sw-planet-quiz/icon_256x256.bd2af1c5f702bb41c91e5e2cfb41898e.png",
+      "sizes": "256x256",
+      "type": "image/png"
+    },
+    {
+      "src": "/sw-planet-quiz/icon_192x192.5586d0606519d7c73f4ae960f22741b0.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/sw-planet-quiz/icon_128x128.7e943beb51467c8c455cb9c927b5d72e.png",
+      "sizes": "128x128",
+      "type": "image/png"
+    }
+  ],
+  "name": "Star Wars Planet Quiz",
+  "short_name": "SW-Quiz",
+  "orientation": "portrait",
+  "display": "standalone",
+  "start_url": ".",
+  "description": "Awesome PWA Star Wars Quiz App",
+  "theme_color": "black",
+  "background_color": "black"
+}

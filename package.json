@@ -6,6 +6,7 @@
   "scripts": {
     "start": "webpack-serve ./config/start.js",
     "build": "webpack --config ./config/build.js --reporter stylish",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
   "author": "Carlos Silva <carlosqsilva@outlook.com> (https://carloseng.com/)",
@@ -37,6 +38,7 @@
     "url-loader": "^1.0.1",
     "webpack": "^4.12.0",
     "webpack-command": "^0.2.1",
+    "webpack-pwa-manifest": "^3.6.2",
     "webpack-serve": "^1.0.4"
   }
 }

@@ -1,6 +1,7 @@
 const SWPrecachePlugin = require("sw-precache-webpack-plugin")
 const CleanWebpackPlugin = require("clean-webpack-plugin")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
+const WebpackPwaManifest = require("webpack-pwa-manifest")
 const webpack = require("webpack")
 const path = require("path")
 
@@ -9,6 +10,7 @@ const public_URL = "/sw-planet-quiz/"
 
 module.exports = {
   mode: "production",
+  devtool: "source-map",
   entry: resolve("src/index.js"),
   output: {
     path: resolve("build"),
@@ -17,8 +19,7 @@ module.exports = {
   },
   plugins: [
     new webpack.DefinePlugin({
-      PRODUCTION: JSON.stringify(true),
-      PUBLIC_URL: public_URL
+      PUBLIC_URL: JSON.stringify(public_URL)
     }),
     new HtmlWebpackPlugin({
       inject: true,
@@ -36,6 +37,20 @@ module.exports = {
         minifyCSS: true,
         minifyURLs: true
       }
+    }),
+    new WebpackPwaManifest({
+      name: "Star Wars Planet Quiz",
+      short_name: "SW-Quiz",
+      description: "Awesome PWA Star Wars Quiz App",
+      display: "standalone",
+      theme_color: "black",
+      background_color: "black",
+      icons: [
+        {
+          src: resolve("public/icon.png"),
+          sizes: [128, 192, 256, 384, 512]
+        }
+      ]
     }),
     new SWPrecachePlugin({
       dontCacheBustUrlsMatching: /\.\w{8}\./,

@@ -42,7 +42,7 @@ class App extends Component {
           <Route path="/intro" component={Intro} />
           <Route path="/game" component={Game} />
           <Install show={this.state.show} onClick={this.onClick}>
-            Install to HomeScreen
+            Add to HomeScreen
           </Install>
         </Wrapper>
       </Router>
@@ -53,7 +53,7 @@ class App extends Component {
 const Wrapper = styled.section`
   background: #000;
   background: url(${background}) center center;
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
   overflow: hidden;
   display: flex;
