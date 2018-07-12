@@ -1,0 +1,42 @@
+{
+  "name": "b2w-test",
+  "version": "1.0.0",
+  "description": "B2W Front-End Test",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-serve ./config/start.js",
+    "build": "webpack --config ./config/build.js --reporter stylish",
+    "deploy": "gh-pages -d build"
+  },
+  "author": "Carlos Silva <carlosqsilva@outlook.com> (https://carloseng.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "babel-loader": "^8.0.0-beta.3",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "mobx": "^5.0.3",
+    "mobx-react": "^5.2.3",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1",
+    "styled-components": "^3.3.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.0-beta.51",
+    "@babel/plugin-proposal-class-properties": "^7.0.0-beta.53",
+    "@babel/plugin-proposal-decorators": "^7.0.0-beta.53",
+    "@babel/preset-env": "^7.0.0-beta.51",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "clean-webpack-plugin": "^0.1.19",
+    "connect-history-api-fallback": "^1.5.0",
+    "file-loader": "^1.1.11",
+    "gh-pages": "^1.2.0",
+    "html-webpack-plugin": "^3.2.0",
+    "koa-connect": "^2.0.1",
+    "sw-precache-webpack-plugin": "^0.11.5",
+    "url-loader": "^1.0.1",
+    "webpack": "^4.12.0",
+    "webpack-command": "^0.2.1",
+    "webpack-serve": "^1.0.4"
+  }
+}
